@@ -1,0 +1,1 @@
+<view class="content"><image class="logo" src="/static/logo.png"></image><view class="home-btns"><text class="title">{{title}}</text><button type="default"><navigator url="/">我是住户</navigator></button><navigator url="/">我是访客</navigator></view></view>

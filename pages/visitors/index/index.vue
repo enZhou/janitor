@@ -1,0 +1,21 @@
+<template>
+	<view>
+		<text>
+			我是访客
+		</text>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			};
+		}
+	}
+</script>
+
+<style lang="less">
+
+</style>

@@ -1,8 +1,17 @@
 <template>
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+		<view class="home-btns">
+			<navigator url="../resident/index/index" hover-class="navigator-hover">
+				<button type="default">
+					我是住户
+				</button>
+			</navigator>
+			<navigator url="/pages/visitors/index/index">
+				<button type="default">
+					我是访客
+				</button>
+			</navigator>
 		</view>
 	</view>
 </template>
@@ -10,9 +19,7 @@
 <script>
 	export default {
 		data() {
-			return {
-				title: 'Hello11'
-			}
+			return {}
 		},
 		onLoad() {
 
