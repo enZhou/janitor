@@ -14,8 +14,12 @@
 				<text>密码：</text>
 				<input type="text" v-model="form.password" class="uni-input common-input" placeholder="输入密码" password="true" />
 			</label>
-			<label>
-				
+			<label class="submit-btn">
+				<button type="default">取消</button>
+				<button type="default">提交</button>
+				<navigator url="../reservation/index/index">
+					跳转到预约界面
+				</navigator>
 			</label>
 		</view>
 	</view>
@@ -35,6 +39,6 @@
 	}
 </script>
 
-<style lang="less">
+<style lang="sass">
 
 </style>

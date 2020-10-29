@@ -24,6 +24,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/resident/reservation/index/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
