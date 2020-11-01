@@ -2,25 +2,25 @@
 	<view class="resident-home">
 		<view class="login-box">
 			<h2>请输入登记的信息</h2>
-			<label >
+			<label>
 				<text>姓名：</text>
-				<input  type="text" v-model="form.name" />
+				<input type="text" v-model="form.name" />
 			</label>
-			<label >
+			<label>
 				<text>手机号：</text>
 				<input type="text" v-model="form.phone" />
 			</label>
-			<label >
+			<label>
 				<text>密码：</text>
 				<input type="text" v-model="form.password" class="uni-input common-input" placeholder="输入密码" password="true" />
 			</label>
 			<label class="submit-btn">
 				<button type="default">取消</button>
 				<button type="default">提交</button>
-				<navigator url="../reservation/index/index">
-					跳转到预约界面
-				</navigator>
 			</label>
+			<navigator url="../reservation/index/index">
+				跳转到预约界面
+			</navigator>
 		</view>
 	</view>
 </template>
