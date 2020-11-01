@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/visitors/index/index",
     "pages/resident/index/index",
-    "pages/resident/reservation/index/index",
+    "pages/resident/reservation/home/index",
     "pages/main/main",
     "pages/visitors/qrcode/qrcode"
   ],
@@ -40,6 +40,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap60.json"
+  "usingComponents": {}
 }

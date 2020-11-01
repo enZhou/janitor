@@ -18,8 +18,11 @@
 				<button type="default">取消</button>
 				<button type="default">提交</button>
 			</label>
-			<navigator url="../reservation/index/index">
-				跳转到预约界面
+			
+			<navigator url="../reservation/home/index">
+				<button type="default">
+					跳转
+				</button>
 			</navigator>
 		</view>
 	</view>

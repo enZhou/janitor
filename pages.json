@@ -20,7 +20,7 @@
 			}
 
 		}, {
-			"path": "pages/resident/reservation/index/index",
+			"path": "pages/resident/reservation/home/index",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
