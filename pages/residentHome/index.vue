@@ -19,9 +19,6 @@
 				<button type="default">取消</button>
 				<button type="default">提交</button>
 			</label>
-			<navigator open-type="redirect" url="../reservation/reservation">
-				预约界面
-			</navigator>
 		</view>
 	</view>
 </template>
@@ -36,6 +33,14 @@
 					password: null
 				}
 			};
+		},
+		onLoad() {
+			uni.setTabBarStyle({
+				color: '#FF0000',
+				selectedColor: '#00FF00',
+				backgroundColor: '#0000FF',
+				borderStyle: 'white'
+			})
 		}
 	}
 </script>

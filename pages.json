@@ -5,7 +5,7 @@
 			"style": {
 				"navigationBarTitleText": "泛感知"
 			}
-		}, 
+		},
 		// 访客页面
 		{
 			"path": "pages/visitorsIndex/index",
@@ -15,14 +15,13 @@
 			}
 
 		},
-		// 住户预约list
+		// 预约列表 
 		{
-			"path": "pages/reservationList/index",
+			"path": "pages/reservation/reservation",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		},
 		// 住户登录
 		{
@@ -34,64 +33,27 @@
 
 		}
 		// 个人中心
-	    ,{
-            "path" : "pages/main/main",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
+		, {
+			"path": "pages/main/main",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
 		// 二维码
-        ,{
-            "path" : "pages/visitorsQrcode/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-        }
-		// 预约列表 
-        ,{
-            "path" : "pages/reservation/reservation",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-        }
-    ],
+		, {
+			"path": "pages/visitorsQrcode/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
-	},
-	"tabBar": {
-		"color": "#BFBFBF",
-		"selectedColor": "#515151",
-		"borderStyle": "black",
-		"backgroundColor": "#FFFFFF",
-		"list": [
-			{
-				"pagePath": "pages/reservationList/index",
-				"text": "预约",
-				"iconPath": "static/icons/reservation.png",
-				"selectedIconPath": "static/icons/reservation_y.png"
-			},
-			{
-				"pagePath": "pages/visitorsQrcode/index",
-				"text": "通行码",
-				"iconPath": "static/icons/qrcode.png",
-				"selectedIconPath": "static/icons/qrcode_y.png"
-			},
-			{
-				"pagePath": "pages/main/main",
-				"text": "我的",
-				"iconPath": "static/icons/reservation.png",
-				"selectedIconPath": "static/icons/reservation_y.png"
-			}
-		] 
 	}
 }
