@@ -59,7 +59,7 @@
 		"backgroundColor": "#FFFFFF",
 		"list": [
 			{
-				"pagePath": "pages/resident/reservation/index/index",
+				"pagePath": "pages/resident/reservation/home/index",
 				"text": "预约",
 				"iconPath": "static/icons/reservation.png",
 				"selectedIconPath": "static/icons/reservation_y.png"
