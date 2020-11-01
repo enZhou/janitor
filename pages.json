@@ -51,7 +51,15 @@
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
-            
+        }
+		// 预约列表 
+        ,{
+            "path" : "pages/reservation/reservation",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
         }
     ],
 	"globalStyle": {

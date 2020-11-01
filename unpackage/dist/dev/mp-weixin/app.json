@@ -5,7 +5,8 @@
     "pages/reservationList/index",
     "pages/residentHome/index",
     "pages/main/main",
-    "pages/visitorsQrcode/index"
+    "pages/visitorsQrcode/index",
+    "pages/reservation/reservation"
   ],
   "subPackages": [],
   "window": {
@@ -40,6 +41,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap11.json"
+  "usingComponents": {}
 }

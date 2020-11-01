@@ -19,12 +19,9 @@
 				<button type="default">取消</button>
 				<button type="default">提交</button>
 			</label>
-			<!-- <navigator url="../reservationList/index">
+			<navigator open-type="redirect" url="../reservation/reservation">
 				预约界面
-			</navigator> -->
-			<button type="default" @click="clg">
-				预约界面
-			</button>
+			</navigator>
 		</view>
 	</view>
 </template>
@@ -39,14 +36,6 @@
 					password: null
 				}
 			};
-		},
-		methods: {
-			clg() {
-				console.log('1238u128u38')
-				uni.navigateTo({
-					url: '/pages/reservationList/index'
-				})
-			}
 		}
 	}
 </script>
