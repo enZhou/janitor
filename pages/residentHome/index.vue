@@ -1,3 +1,4 @@
+<!-- 住户登录 -->
 <template>
 	<view class="resident-home">
 		<view class="login-box">
@@ -18,12 +19,12 @@
 				<button type="default">取消</button>
 				<button type="default">提交</button>
 			</label>
-			
-			<navigator url="../reservation/home/index">
-				<button type="default">
-					跳转
-				</button>
-			</navigator>
+			<!-- <navigator url="../reservationList/index">
+				预约界面
+			</navigator> -->
+			<button type="default" @click="clg">
+				预约界面
+			</button>
 		</view>
 	</view>
 </template>
@@ -38,6 +39,14 @@
 					password: null
 				}
 			};
+		},
+		methods: {
+			clg() {
+				console.log('1238u128u38')
+				uni.navigateTo({
+					url: '/pages/reservationList/index'
+				})
+			}
 		}
 	}
 </script>

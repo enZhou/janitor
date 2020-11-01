@@ -2,12 +2,12 @@
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="home-btns">
-			<navigator url="../resident/index/index" hover-class="navigator-hover">
+			<navigator url="../residentHome/index" hover-class="navigator-hover">
 				<button type="default">
 					我是住户
 				</button>
 			</navigator>
-			<navigator url="/pages/visitors/index/index">
+			<navigator url="../visitorsIndex/index">
 				<button type="default">
 					我是访客
 				</button>
