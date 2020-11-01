@@ -2,7 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/visitors/index/index",
-    "pages/resident/index/index"
+    "pages/resident/index/index",
+    "pages/resident/reservation/index/index",
+    "pages/main/main",
+    "pages/visitors/qrcode/qrcode"
   ],
   "subPackages": [],
   "window": {
@@ -11,5 +14,32 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {}
+  "tabBar": {
+    "color": "#BFBFBF",
+    "selectedColor": "#515151",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/resident/reservation/index/index",
+        "text": "预约",
+        "iconPath": "static/icons/reservation.png",
+        "selectedIconPath": "static/icons/reservation_y.png"
+      },
+      {
+        "pagePath": "pages/visitors/qrcode/qrcode",
+        "text": "通行码",
+        "iconPath": "static/icons/qrcode.png",
+        "selectedIconPath": "static/icons/qrcode_y.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "我的",
+        "iconPath": "static/icons/reservation.png",
+        "selectedIconPath": "static/icons/reservation_y.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

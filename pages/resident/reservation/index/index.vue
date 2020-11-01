@@ -75,6 +75,13 @@
 							}}
 						</span>
 					</view>
+					<view class="_bottom">
+						<span>
+							{{
+								item.applicationTime
+							}}
+						</span>
+					</view>
 				</view>
 			</view>
 		</view>
@@ -108,9 +115,14 @@
 					approveTime: new Date().getTime(),
 					type: '1',
 					state: '1',
-					applicationTime: new Date().getTime()
+					applicationTime: 'new Date().getTime()'
 				}]
 			};
+		},
+		methods: {
+			createtab() {
+				console.log('121')
+			}
 		}
 	}
 </script>

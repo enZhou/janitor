@@ -5,9 +5,30 @@
 			"style": {
 				"navigationBarTitleText": "泛感知"
 			}
+		}, {
+			"path": "pages/visitors/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/resident/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/resident/reservation/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	    ,{
-            "path" : "pages/visitors/index/index",
+            "path" : "pages/main/main",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -16,16 +37,7 @@
             
         }
         ,{
-            "path" : "pages/resident/index/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/resident/reservation/index/index",
+            "path" : "pages/visitors/qrcode/qrcode",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -39,5 +51,31 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#BFBFBF",
+		"selectedColor": "#515151",
+		"borderStyle": "black",
+		"backgroundColor": "#FFFFFF",
+		"list": [
+			{
+				"pagePath": "pages/resident/reservation/index/index",
+				"text": "预约",
+				"iconPath": "static/icons/reservation.png",
+				"selectedIconPath": "static/icons/reservation_y.png"
+			},
+			{
+				"pagePath": "pages/visitors/qrcode/qrcode",
+				"text": "通行码",
+				"iconPath": "static/icons/qrcode.png",
+				"selectedIconPath": "static/icons/qrcode_y.png"
+			},
+			{
+				"pagePath": "pages/main/main",
+				"text": "我的",
+				"iconPath": "static/icons/reservation.png",
+				"selectedIconPath": "static/icons/reservation_y.png"
+			}
+		] 
 	}
 }
