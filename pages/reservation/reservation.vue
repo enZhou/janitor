@@ -90,6 +90,7 @@
 </template>
 
 <script>
+
 	export default {
 		data() {
 			return {
@@ -118,6 +119,6 @@
 					applicationTime: 'new Date().getTime()'
 				}]
 			};
-		}
+		},
 	}
 </script>

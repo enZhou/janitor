@@ -7,14 +7,18 @@
 			</view>
 			<text>
 				{{
-						item.text
-					}}
+					item.text
+				}}
 			</text>
 		</view>
 	</view>
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex';
 	export default {
 		data() {
 			return {
@@ -39,6 +43,12 @@
 					}
 				]
 			};
+		},
+		computed: {
+			...mapState(['menu'])
+		},
+		methods: {
+			...mapMutations(['setMenu'])
 		}
 	}
 </script>
