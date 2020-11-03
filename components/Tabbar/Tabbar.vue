@@ -118,7 +118,7 @@
 			}
 
 			.tabbar-txt {
-				color: #000;
+				color: #1296db;
 			}
 		}
 	}

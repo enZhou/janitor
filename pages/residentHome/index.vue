@@ -46,8 +46,9 @@
 
 <style lang="scss" scoped>
 	.resident-home {
+		position: absolute;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
 		padding: 20rpx;
 		box-sizing: border-box;
 		background: linear-gradient(180deg, #002FA7, #ccc);

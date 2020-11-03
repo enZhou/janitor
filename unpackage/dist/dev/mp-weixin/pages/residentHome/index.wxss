@@ -25,8 +25,9 @@
 /* 透明度 */
 /* 文章场景相关 */
 .resident-home.data-v-6ee2744b {
+  position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 20rpx;
   box-sizing: border-box;
   background: -webkit-linear-gradient(top, #002FA7, #ccc);
