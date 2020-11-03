@@ -3,7 +3,6 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 const store = new Vuex.Store({
 	state: {
-		
 		menu: uni.getStorageSync('tabbarItem') || 'pages/reservation/reservation',
 		menuList: [{
 				"pagePath": "pages/reservation/reservation",
@@ -30,9 +29,9 @@ const store = new Vuex.Store({
 			state.menu = provider;
 			console.log(provider)
 			try {
-				uni.setStorageSync('tabbarItem',provider);
+				uni.setStorageSync('tabbarItem', provider);
 			} catch (e) {
-			    // error
+				// error
 				console.log(e)
 			}
 			// sessionStorage.setItem('tabbarItem',provider)
