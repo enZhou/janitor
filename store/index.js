@@ -3,7 +3,9 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 const store = new Vuex.Store({
 	state: {
-		menu: sessionStorage.getItem('tabbarItem')||'pages/reservation/reservation',
+		menu: uni.getStorage({
+			key: 'tabbarItem'
+		}) || 'pages/reservation/reservation',
 		menuList: [{
 				"pagePath": "pages/reservation/reservation",
 				"text": "预约",
@@ -27,7 +29,11 @@ const store = new Vuex.Store({
 	mutations: {
 		setMenu(state, provider) {
 			state.menu = provider;
-			sessionStorage.setItem('tabbarItem',provider)
+			uni.setStorage({
+				key: 'tabbarItem',
+				data: provider
+			});
+			// sessionStorage.setItem('tabbarItem',provider)
 		}
 	},
 	actions: {
