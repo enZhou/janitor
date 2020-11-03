@@ -29,11 +29,13 @@
 				isPath: 1,
 			};
 		},
+		created() {
+			var pages = getCurrentPages();
+			var page = pages[pages.length - 1];
+			console.error(page)
+		},
 		computed: {
 			...mapState(['menu', 'menuList'])
-		},
-		mounted() {
-			console.log(this.menu)
 		},
 		methods: {
 			...mapMutations(['setMenu']),

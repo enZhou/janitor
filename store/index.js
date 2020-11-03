@@ -5,19 +5,19 @@ const store = new Vuex.Store({
 	state: {
 		menu: uni.getStorageSync('tabbarItem') || 'pages/reservation/reservation',
 		menuList: [{
-				"pagePath": "pages/reservation/reservation",
+				"pagePath": "../../pages/reservation/reservation",
 				"text": "预约",
 				"iconPath": "reservation.png",
 				"selectedIconPath": "reservation_y.png"
 			},
 			{
-				"pagePath": "pages/visitorsQrcode/index",
+				"pagePath": "../../pages/visitorsQrcode/index",
 				"text": "通行码",
 				"iconPath": "qrcode.png",
 				"selectedIconPath": "qrcode_y.png"
 			},
 			{
-				"pagePath": "pages/main/main",
+				"pagePath": "../../pages/main/main",
 				"text": "我的",
 				"iconPath": "my.png",
 				"selectedIconPath": "my_y.png"
@@ -26,15 +26,16 @@ const store = new Vuex.Store({
 	},
 	mutations: {
 		setMenu(state, provider) {
-			state.menu = provider;
-			console.log(provider)
-			try {
+			let url = `../../${getCurrentPages()[1]}`
+			if(state.menu!==provider && url!==provider){
+				state.menu = provider;
+				uni.navigateTo({
+					url: provider,
+				});
 				uni.setStorageSync('tabbarItem', provider);
-			} catch (e) {
-				// error
-				console.log(e)
+			}else{
+				console.log(getCurrentPages())
 			}
-			// sessionStorage.setItem('tabbarItem',provider)
 		}
 	},
 	actions: {
