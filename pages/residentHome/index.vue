@@ -17,7 +17,7 @@
 			</label>
 			<label class="submit-btn">
 				<button type="default">取消</button>
-				<button type="primary">提交</button>
+				<button type="primary" @click="login">提交</button>
 			</label>
 		</view>
 	</view>
@@ -33,6 +33,13 @@
 					password: null
 				}
 			};
+		},
+		methods: {
+			login() {
+				uni.navigateTo({
+					url: '/pages/reservation/reservation',
+				})
+			}
 		}
 	}
 </script>
@@ -44,38 +51,50 @@
 		padding: 20rpx;
 		box-sizing: border-box;
 		background: linear-gradient(180deg, #002FA7, #ccc);
-		.login-box{
+
+		.login-box {
 			width: 100%;
 			display: inline-block;
 			background: #fff;
-			box-shadow: 0 0  20px #000;
+			box-shadow: 0 0 20rpx #000;
 			border-radius: 10rpx;
 			margin-top: 20%;
-			
-			h2{
+
+			h2 {
 				font-size: 56rpx;
 				text-align: center;
-				margin-bottom: 20rpx;
+				margin-top: 50rpx;
+				margin-bottom: 50rpx;
 			}
-			label{
+
+			label {
 				display: flex;
 				flex-direction: row;
 				justify-content: flex-start;
 				align-items: center;
-				padding: 10rpx 20rpx;
-				text{
+				padding: 20rpx 40rpx;
+
+				text {
 					font-size: 28rpx;
 					color: #666;
 					display: inline-block;
 					min-width: 120rpx;
 				}
-				input{
+
+				input {
 					width: 100%;
 					font-size: 28rpx;
 					border: 1rpx solid #ccc;
 					border-radius: 10rpx;
 					padding: 12rpx;
 				}
+			}
+
+			.submit-btn {
+				margin-top: 20rpx;
+				// button{
+				// 	padding: 10rpx 30rpx;
+				// }
 			}
 		}
 	}

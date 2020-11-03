@@ -35,14 +35,13 @@
 	</view>
 </template>
 <style lang="scss" scoped>
+
 	.content {
-		width: 100%;
-		height: 100vh;
-		background: linear-gradient(180deg, #002FA7, #ccc);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
+		background: linear-gradient(180deg, #002FA7, #ccc);
 	}
 
 	.logo {

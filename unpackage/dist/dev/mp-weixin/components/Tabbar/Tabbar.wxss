@@ -24,37 +24,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.content.data-v-57280228 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-          justify-content: flex-start;
-  background: -webkit-linear-gradient(top, #002FA7, #ccc);
-  background: linear-gradient(180deg, #002FA7, #ccc);
-}
-.logo.data-v-57280228 {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-.home-btns.data-v-57280228 {
+.tabbar.data-v-1c2a4684 {
+  position: fixed;
   width: 100%;
-  padding: 20rpx;
-  box-sizing: border-box;
-}
-.home-btns ._btn.data-v-57280228 {
+  background: #fff;
+  bottom: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -68,14 +42,11 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
-  background: #fff;
-  border-radius: 0.5rem;
-  padding: 20rpx 60rpx;
-  margin-bottom: 20rpx;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 10rpx;
 }
-.home-btns ._btn ._left.data-v-57280228 {
+.tabbar .tabbar-item.data-v-1c2a4684 {
+  width: 33.3%;
+  text-align: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -83,6 +54,31 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.tabbar .tabbar-item .tabbar-item-icon .iconPath.data-v-1c2a4684 {
+  width: 50rpx;
+  height: 50rpx;
+}
+.tabbar .tabbar-item .tabbar-item-icon .inIconPath.data-v-1c2a4684 {
+  display: block;
+}
+.tabbar .tabbar-item .tabbar-item-icon .selectedIconPath.data-v-1c2a4684 {
+  display: none;
+}
+.tabbar .tabbar-item .tabbar-item-box.data-v-1c2a4684 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
           justify-content: flex-start;
@@ -90,20 +86,28 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.home-btns ._btn ._left .brackets.data-v-57280228 {
-  width: 50rpx;
-  height: 50rpx;
-  margin-left: 30rpx;
+.tabbar .tabbar-item:nth-child(2) .tabbar-item-box.data-v-1c2a4684 {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  position: relative;
+  top: -25rpx;
+  background: #fff;
 }
-.home-btns ._btn ._left ._h3.data-v-57280228 {
-  font-size: 56rpx;
+.tabbar .tabbar-item:nth-child(2) .tabbar-item-box .iconPath.data-v-1c2a4684 {
+  width: 80rpx;
+  height: 80rpx;
 }
-.home-btns ._btn ._left ._p.data-v-57280228 {
-  font-size: 28rpx;
-  text-align: center;
+.tabbar .tabbar-item .tabbar-txt.data-v-1c2a4684 {
+  color: #ccc;
 }
-.home-btns ._btn ._right_img.data-v-57280228 {
-  width: 200rpx;
-  height: 200rpx;
+.tabbar .active .inIconPath.data-v-1c2a4684 {
+  display: none !important;
+}
+.tabbar .active .selectedIconPath.data-v-1c2a4684 {
+  display: block !important;
+}
+.tabbar .active .tabbar-txt.data-v-1c2a4684 {
+  color: #000;
 }
 
