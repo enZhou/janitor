@@ -59,7 +59,7 @@
 			background: #fff;
 			box-shadow: 0 0 20rpx #000;
 			border-radius: 10rpx;
-			margin-top: 20%;
+			margin-top: 30%;
 
 			h2 {
 				font-size: 56rpx;
@@ -84,6 +84,7 @@
 
 				input {
 					width: 100%;
+					height: 70rpx;
 					font-size: 28rpx;
 					border: 1rpx solid #ccc;
 					border-radius: 10rpx;

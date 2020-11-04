@@ -45,7 +45,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
-		background: linear-gradient(180deg, #002FA7, #ccc);
+		background: linear-gradient(180deg, #002FA7, rgba(100,210,197,0.5));
 	}
 
 	.logo {

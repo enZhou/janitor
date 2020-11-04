@@ -49,7 +49,26 @@
 				"enablePullDownRefresh": false
 			}
 		}
-	],
+		// 预约详情
+	    ,{
+            "path" : "pages/approveReservation/approveReservation",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/modifyInfo/modifyInfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

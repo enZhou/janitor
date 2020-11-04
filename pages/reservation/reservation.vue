@@ -22,7 +22,7 @@
 				</h3>
 			</view>
 			<view class="reservation-type">
-				<span>
+				<span >
 					{{
 						reservationData.approved
 					}}
@@ -33,17 +33,32 @@
 			</view>
 		</view>
 		<view class="reservation-nav">
-			<span>
+			<text @click="openDatetimePicker">
 				{{
-					nowTime
+					birthday
 				}}
-			</span>
-			<button type="default">
+			</text>
+			
+			<button type="default" >
 				全部预约
 			</button>
 		</view>
-		<view class="reservation-list">
-			<view v-for="(item,index) in reservationList" :key="index">
+		<k-scroll-view
+				class="reservation-list"
+		        ref="k-scroll-view"
+		        refreshType="native"
+		        :refreshTip="refreshTip"
+		        :loadTip="loadTip"
+		        :loadingTip="loadingTip"
+		        :emptyTip="emptyTip"
+		        :touchHeight="touchHeight"
+		        :bottom="bottom"
+		        :autoPullUp="true"
+		        @onPullDown="handlePullDown"
+		        @onPullUp="handleLoadMore"
+		    >
+			 
+			<navigator v-for="(item,index) in reservationList" :key="index" :url="`../approveReservation/approveReservation`">
 				<view class="reservation-item" :class="{'item1':item.type==='1','item2':item.type==='2','item3':item.type==='3'}">
 					<view class="_top">
 						<span class='_name'>
@@ -82,16 +97,29 @@
 						</span>
 					</view>
 				</view>
-			</view>
-		</view>
+			</navigator>
+		</k-scroll-view>
 		<Tabbar />
+		<simple-datetime-picker
+		   ref="myPicker"
+		   @submit="handleSubmitTime"
+		   :start-year="2000"
+		   :end-year="2030"
+		   color="red"
+		></simple-datetime-picker>
 	</view>
 </template>
 
 <script>
 import Tabbar from '../../components/Tabbar/Tabbar.vue'
+import kScrollView from '@/components/k-scroll-view/k-scroll-view.vue';
+import simpleDatetimePicker from "@/components/buuug7-simple-datetime-picker/simple-datetime-picker.vue";
 	export default {
-		components:{Tabbar},
+		components:{
+			Tabbar,
+			kScrollView,
+			simpleDatetimePicker
+		},
 		data() {
 			return {
 				appointmentType: {
@@ -132,9 +160,37 @@ import Tabbar from '../../components/Tabbar/Tabbar.vue'
 					state: '3',
 					applicationTime: 'new Date().getTime()'
 				}
-				]
+				],
+				refreshTip:"下拉刷新",
+				loadTip:"加载更多",
+				loadingTip:"加载中",
+				emptyTip:"我真的一滴也没有了",
+				touchHeight:50,
+				bottom:50,
+				birthday:"2020-02-03"
 			};
 		},
+		methods:{
+			handlePullDown(){
+				console.log('下拉刷新')
+			},
+			handleLoadMore(){
+				console.log('上拉加载更多')
+			},
+			 // 打开picker
+			  openDatetimePicker() {
+				 this.$refs.myPicker.show();
+			  },
+		
+			  // 关闭picker
+			  closeDatetimePicker() {
+				 this.$refs.myPicker.hide();
+			  },
+			  handleSubmitTime(e) {
+				 console.log(e); // {year: "2019", month: "07", day: "17", hour: "15", minute: "21"}
+				 this.birthday = `${e.year}-${e.month}-${e.day} ${e.hour}:${e.minute}`;
+			  }
+		}
 	}
 </script>
 <style lang="scss" scoped>
