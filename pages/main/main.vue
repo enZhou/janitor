@@ -60,6 +60,7 @@
 		height: 100%;
 		width: 100%;
 		padding: 30rpx;
+		box-sizing: border-box;
 
 		&::after {
 			content: '';
