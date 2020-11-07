@@ -38,7 +38,7 @@
                      {{ item | formatNum }}日
                   </view>
                </picker-view-column>
-               <picker-view-column>
+               <!-- <picker-view-column>
                   <view class="column-item" v-for="item in hours">
                      {{ item | formatNum }}时
                   </view>
@@ -47,7 +47,7 @@
                   <view class="column-item" v-for="item in minutes">
                      {{ item | formatNum }}分
                   </view>
-               </picker-view-column>
+               </picker-view-column> -->
             </picker-view>
          </view>
       </view>
@@ -83,14 +83,12 @@ export default {
          days: [],
          hours: [],
          minutes: [],
-
          currentDate: new Date(),
          year: "",
          month: "",
          day: "",
          hour: "",
          minute: "",
-
          value: [0, 0, 0, 0, 0]
       };
    },
@@ -208,8 +206,8 @@ export default {
             year: formatNum(this.year),
             month: formatNum(this.month),
             day: formatNum(this.day),
-            hour: formatNum(this.hour),
-            minute: formatNum(this.minute)
+            // hour: formatNum(this.hour),
+            // minute: formatNum(this.minute)
          };
          this.$emit("submit", result);
          this.hide();
