@@ -36,10 +36,13 @@
 				<image src="../../static/icons/next.png" class="_next"></image>
 			</view>
 		</view>
+		<Tabbar/>
 	</view>
 </template>
 
 <script>
+	import Tabbar from '../../components/Tabbar/Tabbar.vue'
+	
 	export default {
 		data() {
 			return {

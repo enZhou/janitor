@@ -43,6 +43,12 @@
 				全部预约
 			</button>
 		</view>
+		
+		<view class="time_item">
+			<button type="default" :class="{'active':timeType==='1'}" @click="toggleTime('1')">七天预约</button>
+			<button type="default" :class="{'active':timeType==='2'}" @click="toggleTime('2')">一月预约</button>
+			<button type="default" :class="{'active':timeType==='3'}" @click="toggleTime('3')">全部预约</button>
+		</view>
 		<k-scroll-view
 				class="reservation-list"
 		        ref="k-scroll-view"
@@ -139,6 +145,7 @@ import simpleDatetimePicker from "@/components/buuug7-simple-datetime-picker/sim
 					wait: 0,
 					approved: 0
 				},
+				timeType:"",
 				nowTime: new Date().getTime(),
 				reservationList: [{
 					name: '王璐',
@@ -190,6 +197,10 @@ import simpleDatetimePicker from "@/components/buuug7-simple-datetime-picker/sim
 			  handleSubmitTime(e) {
 				 console.log(e); // {year: "2019", month: "07", day: "17", hour: "15", minute: "21"}
 				 this.birthday = `${e.year}-${e.month}-${e.day}`;
+			  },
+			  
+			  toggleTime(type) {
+			  	this.timeType = type;
 			  }
 		}
 	}
@@ -213,6 +224,23 @@ import simpleDatetimePicker from "@/components/buuug7-simple-datetime-picker/sim
 			bottom: 50rpx;
 			background-color: rgba(83,182,223,1);
 			color: #fff;
+		}
+		
+		.time_item {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			margin-bottom: 20rpx;
+		
+			button {
+				font-size: 24rpx;
+			}
+		
+			.active {
+				background: #53b6df;
+				color: #fff;
+			}
 		}
 	}
 	// 统计数据样式

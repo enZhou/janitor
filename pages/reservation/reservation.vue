@@ -22,7 +22,7 @@
 				</h3>
 			</view>
 			<view class="reservation-type">
-				<span >
+				<span>
 					{{
 						reservationData.approved
 					}}
@@ -38,26 +38,20 @@
 					birthday
 				}}
 			</text>
-			
-			<button type="default" >
+
+			<button type="default">
 				全部预约
 			</button>
 		</view>
-		<k-scroll-view
-				class="reservation-list"
-		        ref="k-scroll-view"
-		        refreshType="native"
-		        :refreshTip="refreshTip"
-		        :loadTip="loadTip"
-		        :loadingTip="loadingTip"
-		        :emptyTip="emptyTip"
-		        :touchHeight="touchHeight"
-		        :bottom="bottom"
-		        :autoPullUp="true"
-		        @onPullDown="handlePullDown"
-		        @onPullUp="handleLoadMore"
-		    >
-			 
+		<view class="time_item">
+			<button type="default" :class="{'active':timeType==='1'}" @click="toggleTime('1')">七天预约</button>
+			<button type="default" :class="{'active':timeType==='2'}" @click="toggleTime('2')">一月预约</button>
+			<button type="default" :class="{'active':timeType==='3'}" @click="toggleTime('3')">全部预约</button>
+		</view>
+		<k-scroll-view class="reservation-list" ref="k-scroll-view" refreshType="native" :refreshTip="refreshTip" :loadTip="loadTip"
+		 :loadingTip="loadingTip" :emptyTip="emptyTip" :touchHeight="touchHeight" :bottom="bottom" :autoPullUp="true"
+		 @onPullDown="handlePullDown" @onPullUp="handleLoadMore">
+
 			<navigator v-for="(item,index) in reservationList" :key="index" :url="`../approveReservation/approveReservation`">
 				<view class="reservation-item" :class="{'item1':item.type==='1','item2':item.type==='2','item3':item.type==='3'}">
 					<view class="_top">
@@ -100,22 +94,16 @@
 			</navigator>
 		</k-scroll-view>
 		<Tabbar />
-		<simple-datetime-picker
-		   ref="myPicker"
-		   @submit="handleSubmitTime"
-		   :start-year="2000"
-		   :end-year="2030"
-		   color="red"
-		></simple-datetime-picker>
+		<simple-datetime-picker ref="myPicker" @submit="handleSubmitTime" :start-year="2000" :end-year="2030" color="red"></simple-datetime-picker>
 	</view>
 </template>
 
 <script>
-import Tabbar from '../../components/Tabbar/Tabbar.vue'
-import kScrollView from '@/components/k-scroll-view/k-scroll-view.vue';
-import simpleDatetimePicker from "@/components/buuug7-simple-datetime-picker/simple-datetime-picker.vue";
+	import Tabbar from '../../components/Tabbar/Tabbar.vue'
+	import kScrollView from '@/components/k-scroll-view/k-scroll-view.vue';
+	import simpleDatetimePicker from "@/components/buuug7-simple-datetime-picker/simple-datetime-picker.vue";
 	export default {
-		components:{
+		components: {
 			Tabbar,
 			kScrollView,
 			simpleDatetimePicker
@@ -138,6 +126,7 @@ import simpleDatetimePicker from "@/components/buuug7-simple-datetime-picker/sim
 					approved: 0
 				},
 				nowTime: new Date().getTime(),
+				timeType: '',
 				reservationList: [{
 					name: '王璐',
 					phone: '18308198574',
@@ -145,56 +134,59 @@ import simpleDatetimePicker from "@/components/buuug7-simple-datetime-picker/sim
 					type: '1',
 					state: '1',
 					applicationTime: 'new Date().getTime()'
-				},{
+				}, {
 					name: '王璐111',
 					phone: '123123123123',
 					approveTime: new Date().getTime(),
 					type: '2',
 					state: '2',
 					applicationTime: 'new Date().getTime()'
-				},{
+				}, {
 					name: '王璐2222',
 					phone: '19933332222',
 					approveTime: new Date().getTime(),
 					type: '3',
 					state: '3',
 					applicationTime: 'new Date().getTime()'
-				}
-				],
-				refreshTip:"下拉刷新",
-				loadTip:"加载更多",
-				loadingTip:"加载中",
-				emptyTip:"我真的一滴也没有了",
-				touchHeight:50,
-				bottom:50,
-				birthday:"2020-02-03"
+				}],
+				refreshTip: "下拉刷新",
+				loadTip: "加载更多",
+				loadingTip: "加载中",
+				emptyTip: "我真的一滴也没有了",
+				touchHeight: 50,
+				bottom: 50,
+				birthday: "2020-02-03"
 			};
 		},
-		methods:{
-			handlePullDown(){
+		methods: {
+			handlePullDown() {
 				console.log('下拉刷新')
 			},
-			handleLoadMore(){
+			handleLoadMore() {
 				console.log('上拉加载更多')
 			},
-			 // 打开picker
-			  openDatetimePicker() {
-				 this.$refs.myPicker.show();
-			  },
-		
-			  // 关闭picker
-			  closeDatetimePicker() {
-				 this.$refs.myPicker.hide();
-			  },
-			  handleSubmitTime(e) {
-				 console.log(e); // {year: "2019", month: "07", day: "17", hour: "15", minute: "21"}
-				 this.birthday = `${e.year}-${e.month}-${e.day} ${e.hour}:${e.minute}`;
-			  }
+			// 打开picker
+			openDatetimePicker() {
+				this.$refs.myPicker.show();
+			},
+
+			// 关闭picker
+			closeDatetimePicker() {
+				this.$refs.myPicker.hide();
+			},
+			handleSubmitTime(e) {
+				console.log(e); // {year: "2019", month: "07", day: "17", hour: "15", minute: "21"}
+				this.birthday = `${e.year}-${e.month}-${e.day}`;
+				this.timeType = '';
+			},
+			toggleTime(type) {
+				this.timeType = type;
+			}
 		}
 	}
 </script>
 <style lang="scss" scoped>
-	.reservation-container{
+	.reservation-container {
 		width: 100%;
 		height: 100vh;
 		padding: 20rpx;
@@ -202,13 +194,14 @@ import simpleDatetimePicker from "@/components/buuug7-simple-datetime-picker/sim
 		box-sizing: border-box;
 		background-color: #F8F8F8;
 	}
+
 	// 统计数据样式
-	.reservation-box{
+	.reservation-box {
 		border-radius: 20rpx;
 		background-color: #FFFFFF;
 		overflow: hidden;
-		
-		.reservation-type{
+
+		.reservation-type {
 			float: left;
 			width: 33.33%;
 			padding: 50rpx 0;
@@ -216,72 +209,99 @@ import simpleDatetimePicker from "@/components/buuug7-simple-datetime-picker/sim
 			justify-content: center;
 			flex-direction: column;
 			align-items: center;
+
 			// 统计选中样式
-			&.active{
-				color: rgba(83,182,223,1);
+			&.active {
+				color: rgba(83, 182, 223, 1);
 			}
 		}
 	}
+
 	// 时间筛选
-	.reservation-nav{
+	.reservation-nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		margin: 32rpx 0;
-		
+
 		// 全部预约按钮样式
-		button{
+		button {
 			width: 200rpx;
 			height: 70rpx;
 			font-size: 28rpx;
-			background-color: rgba(83,182,223,1);
+			background-color: rgba(83, 182, 223, 1);
 			color: #FFFFFF;
 			margin: 0;
 		}
 	}
-	
+
+	.time_item {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: 20rpx;
+
+		button {
+			font-size: 24rpx;
+		}
+
+		.active {
+			background: #53b6df;
+			color: #fff;
+		}
+	}
+
 	// 列表
-	.reservation-list{
+	.reservation-list {
 		height: 80%;
 		overflow-y: auto;
-		.reservation-item{
+
+		.reservation-item {
 			width: 100%;
 			border-radius: 8rpx;
 			padding: 40rpx 30rpx;
 			box-sizing: border-box;
 			color: #FFFFFF;
 			margin-bottom: 20rpx;
+
 			// 列表背景颜色
-			&.item1{
-				background-color: rgba(83,182,223,0.5);
+			&.item1 {
+				background-color: rgba(83, 182, 223, 0.5);
 			}
-			&.item2{
-				background-color: rgba(100,210,197,0.5);
+
+			&.item2 {
+				background-color: rgba(100, 210, 197, 0.5);
 			}
-			&.item3{
-				background-color: rgba(104,206,122,0.5);
+
+			&.item3 {
+				background-color: rgba(104, 206, 122, 0.5);
 			}
-			&.item4{
-				background-color: rgba(188,206,106,0.5);
+
+			&.item4 {
+				background-color: rgba(188, 206, 106, 0.5);
 			}
-			
-			._top,._center,._bottom{
+
+			._top,
+			._center,
+			._bottom {
 				display: flex;
 				justify-content: space-between;
 			}
-			
-			._top{
+
+			._top {
 				width: 100%;
 				font-size: 32rpx;
 				font-weight: 500;
 			}
-			
-			._center,._bottom{
+
+			._center,
+			._bottom {
 				width: 100%;
 				font-size: 28rpx;
 				margin-top: 20rpx;
-				
-				._state{
+
+				._state {
 					font-size: 36rpx;
 					font-weight: 500;
 				}
