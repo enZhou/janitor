@@ -1,19 +1,28 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		{
+		    "path" : "pages/testPage/testPage",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
 		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "泛感知"
 			}
 		},
-		// 访客页面
+		// // 访客页面
 		{
 			"path": "pages/visitorsIndex/index",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		},
 		// 预约列表 
 		{
@@ -31,35 +40,35 @@
 				"enablePullDownRefresh": false
 			}
 
-		}
+		}, 
 		// 个人中心
-		, {
+		{
 			"path": "pages/main/main",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 
-		}
+		},
 		// 二维码
-		, {
+		{
 			"path": "pages/visitorsQrcode/index",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-		}
+		},
 		// 预约详情
-	    ,{
-            "path" : "pages/approveReservation/approveReservation",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
+	    // {
+     //        "path" : "pages/approveReservation/approveReservation",
+     //        "style" :                                                                                    
+     //        {
+     //            "navigationBarTitleText": "",
+     //            "enablePullDownRefresh": false
+     //        }
             
-        }
-        ,{
+     //    },
+		{
             "path" : "pages/modifyInfo/modifyInfo",
             "style" :                                                                                    
             {
@@ -67,8 +76,8 @@
                 "enablePullDownRefresh": false
             }
             
-        }
-        ,{
+        },
+		{
             "path" : "pages/reservationList/reservationList",
             "style" :                                                                                    
             {
@@ -76,8 +85,8 @@
                 "enablePullDownRefresh": false
             }
             
-        }
-        ,{
+        },
+		{
             "path" : "pages/visitorsReservation/visitorsReservation",
             "style" :                                                                                    
             {
@@ -85,7 +94,113 @@
                 "enablePullDownRefresh": false
             }
             
-        }
+        },
+		// 注册
+		{
+            "path" : "pages/register/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		// 注册-常驻人口
+		{
+			"path" : "pages/register/permanent",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "常驻人员",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 注册-常驻人口
+		{
+			"path" : "pages/register/visitor",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "访客人员",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 个人中心
+		{
+			"path" : "pages/personalCenter/index",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 个人中心-添加区域
+		{
+			"path" : "pages/personalCenter/addArea",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "添加区域",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 访客邀请
+		{
+			"path": "pages/guestInvitation/index",
+			"style": {
+				"navigationBarTitleText": "访客邀请",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 访客 - 分享二维码
+		{
+			"path": "pages/guestInvitation/qrCode",
+			"style": {
+				"navigationBarTitleText": "分享",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 访客预约
+		{
+			"path": "pages/guestAppointment/index",
+			"style": {
+				"navigationBarTitleText": "访客预约",
+				"enablePullDownRefresh": false
+			}
+		},
+		// 访客
+		{
+		    "path" : "pages/approveReservation/approveReservation",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "访客",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		// 人脸识别
+		{
+			"path": "pages/faceOpenDoor/faceOpenDoor",
+			"style": {
+				"navigationBarTitleText": "人脸识别"
+			}
+		},
+		// 物业公告
+		{
+		    "path" : "pages/propertyAnnouncement/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "物业公告",
+		        "enablePullDownRefresh": false
+		    }
+		},
+		// 物业公告-详情
+		{
+		    "path" : "pages/propertyAnnouncement/detail",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "公告详情",
+		        "enablePullDownRefresh": false
+		    }
+		}
+        
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

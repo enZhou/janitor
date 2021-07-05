@@ -1,9 +1,9 @@
 <template>
 	<view class="approve">
 		<view class="reservation-box">
-			<view class="_title">
+			<!-- <view class="_title">
 				访客
-			</view>
+			</view> -->
 			<view class="_info_item">
 				<text class="_name">
 					姓名:
@@ -46,7 +46,7 @@
 			</view>
 		</view>
 		<view class="approve-radio">
-			<text class="radio_title">上是否限定进入次数:</text>
+			<text class="radio_title">是否限定进入次数:</text>
 			<radio-group class="radio-list" @change="radioChange">
 				<label class="uni-list-cell uni-list-cell-pd" v-for="(item,index) in radioItems" :key="index">
 					<view class="_radio">
@@ -117,19 +117,22 @@
 
 <style lang="scss" scoped>
 .approve{
+	width: 100vw;
+	min-height: 100vh;
 	padding: 20rpx;
+	box-sizing: border-box;
+	background-color: #eee;
 	.reservation-box{
-		box-shadow: 0 0 20rpx rgba(100,210,197,0.5);
-		border-radius: 10rpx;
-		margin-bottom: 30rpx;
-		background-color: rgba(100,210,197,0.5);
-		color: #fff;
+		box-shadow: 4rpx 8rpx 24rpx -2rpx rgba($color: #aaa, $alpha: .5);
+		border-radius: 20rpx;
+		background-color: #fff;
+		margin-bottom: 20rpx;
+		padding: 20rpx;
 		._title{
 			width: 100%;
 			font-size: 56rpx;
 			padding: 15rpx 30rpx;
 			border-bottom: 1px solid #fff;
-			margin-bottom: 20rpx;
 		}
 		._info_item{
 			display: flex;
@@ -148,7 +151,11 @@
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: center;
-		margin-bottom: 30rpx;
+		box-shadow: 4rpx 8rpx 24rpx -2rpx rgba($color: #aaa, $alpha: .5);
+		border-radius: 10rpx;
+		background-color: #fff;
+		margin-bottom: 20rpx;
+		padding: 30rpx;
 		.radio_title{
 			display: inline-block;
 			max-width:350rpx ;
@@ -172,7 +179,12 @@
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: center;
-		margin-bottom: 30rpx;
+		box-shadow: 4rpx 8rpx 24rpx -2rpx rgba($color: #aaa, $alpha: .5);
+		border-radius: 10rpx;
+		background-color: #fff;
+		margin-bottom: 20rpx;
+		padding: 30rpx;
+		
 		._title{
 			display: inline-block;
 			min-width: 150rpx;
@@ -185,6 +197,12 @@
 		border: 1px solid #eee;
 		padding: 30rpx;
 		border-radius: 10rpx;
+		
+		box-shadow: 4rpx 8rpx 24rpx -2rpx rgba($color: #aaa, $alpha: .5);
+		border-radius: 10rpx;
+		background-color: #fff;
+		margin-bottom: 30rpx;
+		padding: 30rpx;
 	}
 	.approve-btn{
 		display: flex;
