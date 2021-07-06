@@ -16,6 +16,16 @@
 			</navigator>
 		</view>
 		<view class="link">
+			<navigator url="../faceApprove/faceApprove">
+				人脸认证
+			</navigator>
+		</view>
+		<view class="link">
+			<navigator url="../faceApprove/audit">
+				人脸认证 -审核
+			</navigator>
+		</view>
+		<view class="link">
 			<navigator url="../guestInvitation/index">
 				访客邀请
 			</navigator>

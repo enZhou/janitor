@@ -1,6 +1,7 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		
+		
 		{
 		    "path" : "pages/testPage/testPage",
 		    "style" :                                                                                    
@@ -9,6 +10,14 @@
 		        "enablePullDownRefresh": false
 		    }
 		    
+		},// 个人中心
+		{
+			"path": "pages/main/main",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		
 		},
 		{
 			"path": "pages/index/index",
@@ -41,15 +50,6 @@
 			}
 
 		}, 
-		// 个人中心
-		{
-			"path": "pages/main/main",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
-		},
 		// 二维码
 		{
 			"path": "pages/visitorsQrcode/index",
@@ -199,8 +199,27 @@
 		        "navigationBarTitleText": "公告详情",
 		        "enablePullDownRefresh": false
 		    }
+		},// 人脸认证-结果
+		{
+		    "path" : "pages/faceApprove/audit",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		
+		// 人脸认证
+		{
+		    "path" : "pages/faceApprove/faceApprove",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "人脸认证",
+		        "enablePullDownRefresh": false
+		    }
+		    
 		}
-        
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
