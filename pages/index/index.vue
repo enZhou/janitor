@@ -126,17 +126,24 @@
 
 <style lang="scss" scoped>
 	.content{
+		width: 100vw;
+		min-height: 100vh;
+		box-sizing: border-box;
+		background-color: #eee;
 		padding: 0 20rpx;
 		.user-head{
-			background-color: rgb(26,140,207);
+			background-image: url(../../static/icons/indexBg.jpg);
+			background-repeat: no-repeat;
+			height:220rpx ;
 			border-radius: 10rpx;
 			padding: 20rpx;
-				color: #fff;
+			color: #fff;
 			._type_box{
 				display: flex;
 				flex-direction: row;
 				justify-content: flex-start;
 				margin-bottom: 30rpx;
+				padding-top: 30rpx;
 				._type{
 					margin-left: 12rpx;
 					&.unverified{
@@ -155,7 +162,14 @@
 		.application,
 		.server,
 		.life{
+			position: relative;
+			z-index: 1;
+			border-color: #fff;
+			background-color: #fff;
+			border-radius: 10rpx;
+			box-shadow: 4rpx 8rpx 24rpx -2rpx rgba($color: #ddd, $alpha: .5);
 			margin-top: 20rpx;
+			padding: 20rpx 10rpx;
 			._tit{
 				position: relative;
 				font-size: 34rpx;

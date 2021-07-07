@@ -42,8 +42,10 @@
 			</view>
 			
 		</view>
-		<navigator class="add-area" url="./addArea">
-				新增区域
+		<navigator url="./addArea"  class="add-area">
+			<button type="primary" >
+						新增区域
+			</button>
 		</navigator>
 	</view>
 </template>
@@ -139,6 +141,7 @@
 		width: 80%;
 		left: 50%;
 		margin-left: -40%;
+		
 		bottom: 30rpx;
 	}
 }
