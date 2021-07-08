@@ -1,7 +1,7 @@
 <template>
 	<view class="reservation-container">
 		<view class="reservation-box">
-			<view class="reservation-type active">
+			<view class="reservation-type" :class="reservationType===1 && 'active'" @click="search(1)">
 				<span>
 					{{
 						reservationData.reservation
@@ -11,7 +11,7 @@
 					今日预约
 				</h3>
 			</view>
-			<view class="reservation-type">
+			<view class="reservation-type"  :class="reservationType===2 && 'active'" @click="search(2)">
 				<span>
 					{{
 						reservationData.wait
@@ -21,7 +21,7 @@
 					待审批预约
 				</h3>
 			</view>
-			<view class="reservation-type">
+			<view class="reservation-type"  :class="reservationType===3 && 'active'" @click="search(3)">
 				<span>
 					{{
 						reservationData.approved
@@ -93,7 +93,6 @@
 				</view>
 			</navigator>
 		</k-scroll-view>
-		<Tabbar />
 		<simple-datetime-picker ref="myPicker" @submit="handleSubmitTime" :start-year="2000" :end-year="2030" color="red"></simple-datetime-picker>
 	</view>
 </template>
@@ -127,6 +126,7 @@
 				},
 				nowTime: new Date().getTime(),
 				timeType: '',
+				reservationType:1,
 				reservationList: [{
 					name: '王璐',
 					phone: '18308198574',
@@ -181,6 +181,9 @@
 			},
 			toggleTime(type) {
 				this.timeType = type;
+			},
+			search(type){
+				this.reservationType = type
 			}
 		}
 	}
